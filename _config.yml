@@ -21,7 +21,7 @@
 title: kenny's ocean
 email: youngyoo.kim.94@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Studying Economics and Data Science
+  Studying Economics & Data Science
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://starfishkenny.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 
