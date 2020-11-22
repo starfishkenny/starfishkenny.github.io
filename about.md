@@ -8,7 +8,7 @@ permalink: about/
   This space is built to organize and share my studies, projects, and life. Hope to share my knowledge and skills, as well as learn from others in this ocean of mine.
 </p>
 
-A little bit about myself
+A little bit about myself:
 
 + Youngyoo Kim (김영유, starfishkenny)
 + Currently studying 'Economics', 'Finance', 'Data Science', etc.
