@@ -38,12 +38,12 @@ author:
 nav:
   Home:           
     - '/blog/'
-  Today I Learned:           
+  Categories:           
     - '/'
-    - { Categories: '/blog/categories/' }
+    # - { Categories: '/blog/categories/' }
     # - { Tags: '/blog/tags/' }
+    - { Let's Dive In: "/blog/categories/#Let's Dive In" }
     - { Github Pages: '/blog/categories/#Github_Pages'}
-    - { Git: '/blog/categories/#Git'}
   About:          
     - '/about/'
   Search:          
@@ -54,7 +54,7 @@ tag_page: '/blog/tags/'
 category_page: '/blog/categories/'
 
 hero:
-  image: /public/img/european_subway.jpg
+  image: /public/img/european_sea.jpg
   caption: Photo By &copy; starfishkenny</a>
 
 # Puglins
