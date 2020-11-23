@@ -1,7 +1,7 @@
 # Site Info
 title: starfishkenny's Ocean
 tagline: "starfishkenny's Ocean"
-description: ""
+description: "Let's Dive In"
 baseurl: ""
 url: http://starfishkenny.github.io
 logo: '/public/logo.png'
@@ -24,39 +24,41 @@ version: 1.0.0
 
 # About/contact
 author:
-  name: SEJIN PARK
-  description: Jaden (SEJIN PARK)
+  name: YOUNGYOO KIM
+  description: Kenny (YOUNGYOO KIM)
   contact:
-    # linkedin:  <hide>
+    linkedin:  https://www.linkedin.com/in/youngyoo-kim-8a1ba017b/
     github:    https://github.com/starfishkenny
     # facebook:  <hide>
     # twitter:   <hide>
     # weibo:     <hide>
-    email:     mailto:sejinpark.me@gmail.com
+    email:     mailto:youngyoo.kim.94@gmail.com
 
 # Navigation (2nd level links supported)
 nav:
   Home:           
-    - '/'
-  Blog:           
     - '/blog/'
+  Today I Learned:           
+    - '/'
     - { Categories: '/blog/categories/' }
-    - { Tags: '/blog/tags/' }
+    # - { Tags: '/blog/tags/' }
+    - { Github Pages: '/blog/categories/#Github_Pages'}
+    - { Git: '/blog/categories/#Git'}
   About:          
     - '/about/'
-  Github Project: 
-    - 'http://codinfox.github.io/'
+  Search:          
+    - '/search/'
 
 # Where are tags and categories displayed
 tag_page: '/blog/tags/'
 category_page: '/blog/categories/'
 
 hero:
-  image: /public/img/we_will_be_giants_by_yalestewart.jpg
-  caption: Original Artwork &copy; <a href="http://yalestewart.deviantart.com/art/We-Will-Be-Giants-370176475">Yale Stewart</a>
+  image: /public/img/european_subway.jpg
+  caption: Photo By &copy; starfishkenny</a>
 
 # Puglins
 mathjax: true # whether support mathjax
-google_analytics_token: 'UA-00000000-1' # leave blank if you don't want google analytics
-disqus_short_name: 'your_short_name' # leave blank if you don't want disqus
+google_analytics_token: '' # leave blank if you don't want google analytics
+disqus_short_name: '' # leave blank if you don't want disqus
 
