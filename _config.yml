@@ -37,9 +37,9 @@ author:
 # Navigation (2nd level links supported)
 nav:
   Home:           
-    - '/blog/'
-  Categories:           
     - '/'
+  Categories:           
+    - '/blog/'
     - { Data_Science: '/blog/categories/data_science' }
     - { Economics: '/blog/categories/economics' }
     - { Finance: '/blog/categories/finance' }
