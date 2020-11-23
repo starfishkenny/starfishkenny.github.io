@@ -4,7 +4,7 @@ tagline: "starfishkenny's Ocean"
 description: "Let's Dive In"
 baseurl: ""
 url: http://starfishkenny.github.io
-logo: '/public/logo_1.png'
+logo: '/public/logo.png'
 
 # Site configurations
 gems:
