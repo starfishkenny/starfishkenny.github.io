@@ -68,12 +68,3 @@ hero:
 mathjax: true # whether support mathjax
 google_analytics_token: '' # leave blank if you don't want google analytics
 disqus_short_name: 'starfishkenny' # leave blank if you don't want disqus
-
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts" // layout : post
-    values:
-      layout: "post" 
-      comments : true
