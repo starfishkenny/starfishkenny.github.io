@@ -199,6 +199,12 @@ a.sidebar-nav-item:focus {
   }
 }
 
+@media (min-width: 30.1em) {
+  .sidebar-toggle, .search {
+    position: fixed;
+  }
+}
+
 .sidebar-personal-info {
   .sidebar-personal-info-section {
     &:not(:first-of-type) {
@@ -211,8 +217,4 @@ a.sidebar-nav-item:focus {
     }
   }
 }
-@media (min-width: 30.1em) {
-  .sidebar-toggle, .search {
-    position: fixed;
-  }
-}
+
