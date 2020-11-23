@@ -1,7 +1,7 @@
 # Site Info
 title: starfishkenny's Ocean
-tagline: 'starfishkenny's Ocean'
-description: 'A Jekyll theme adapted from <a href="http://lanyon.getpoole.com/" target="_blank">Lanyon</a>. Made by <a href="http://codinfox.github.io" target="_blank">@codinfox</a>.'
+tagline: "starfishkenny's Ocean"
+description: ""
 baseurl: ""
 url: http://starfishkenny.github.io
 logo: '/public/logo.png'
@@ -28,7 +28,7 @@ author:
   description: Jaden (SEJIN PARK)
   contact:
     # linkedin:  <hide>
-    github:    https://github.com/callmejaden
+    github:    https://github.com/starfishkenny
     # facebook:  <hide>
     # twitter:   <hide>
     # weibo:     <hide>
