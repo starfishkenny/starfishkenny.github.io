@@ -4,7 +4,7 @@ tagline: "starfishkenny's Ocean"
 description: "Let's Dive In"
 baseurl: ""
 url: http://starfishkenny.github.io
-logo: '/public/favicon.png'
+logo: '/public/favicon.ico'
 
 # Site configurations
 gems:
@@ -26,6 +26,7 @@ version: 1.0.0
 author:
   name: YOUNGYOO KIM
   description: starfishkenny (YOUNGYOO KIM)
+               Studying & Learning Everyday
   contact:
     linkedin:  https://www.linkedin.com/in/youngyoo-kim-8a1ba017b/
     github:    https://github.com/starfishkenny
