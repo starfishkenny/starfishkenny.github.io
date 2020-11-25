@@ -40,7 +40,7 @@ nav:
   Home:           
     - '/'
   Categories:           
-    - '/blog/'
+    - '/blog/categories'
     # - { Tags: '/blog/tags/' }
     # - { Let's Dive In: "/blog/categories/#Let's Dive In" }
     # - { Github Pages: '/blog/categories/#Github_Pages'}
