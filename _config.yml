@@ -41,11 +41,6 @@ nav:
     - '/'
   Categories:           
     - '/blog/'
-    - { Data_Science: '/blog/categories/data_science' }
-    - { Economics: '/blog/categories/economics' }
-    - { Finance: '/blog/categories/finance' }
-    - { OA: '/blog/categories/oa' }
-    - { Thoughts: '/blog/categories/thoughts' }
     # - { Tags: '/blog/tags/' }
     # - { Let's Dive In: "/blog/categories/#Let's Dive In" }
     # - { Github Pages: '/blog/categories/#Github_Pages'}
