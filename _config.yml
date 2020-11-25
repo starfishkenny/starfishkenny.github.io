@@ -16,7 +16,7 @@ excerpt_separator: "<!-- more -->"
 sass:
   style: compressed
   sass_dir: _scss    
-paginate: 10
+paginate: 5
 paginate_path: '/blog/page:num'
 permalink: pretty
 
@@ -40,7 +40,7 @@ nav:
   Home:           
     - '/'
   Categories:           
-    - '/blog/categories'
+    - '/blog/categories/'
     # - { Tags: '/blog/tags/' }
     # - { Let's Dive In: "/blog/categories/#Let's Dive In" }
     # - { Github Pages: '/blog/categories/#Github_Pages'}
