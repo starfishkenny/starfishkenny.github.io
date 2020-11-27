@@ -19,7 +19,7 @@ $theme-color: $default;
 $theme-color-dark: darken($theme-color, 10%);
 
 $post-date-color: #9a9a9a;
-$title-color: #343a40;
+$title-color: #e35454;
 $masthead-title-small-color: #343a40;
 
 /* Layout */
@@ -28,5 +28,5 @@ $overlay-sidebar: false;
 
 /* Font stack */
 $font-serif: "PT Serif", Georgia, "Times New Roman", serif;
-$font-sans: 'NanumSquare', "Source Sans Pro", "Apple SD Gothic Neo", "Nanum Barun Gothic", "Nanum Gothic", 'Verdana', 'Arial', 'Dotum', 'sans-serif';
+$font-sans: NanumSquare, "Source Sans Pro", "Apple SD Gothic Neo", "Nanum Barun Gothic", "Nanum Gothic", Verdana, Arial, Dotum, sans-serif;
 $font-font-awesome: FontAwesome;
