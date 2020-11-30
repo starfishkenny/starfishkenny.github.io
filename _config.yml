@@ -60,7 +60,11 @@ hero:
   image: /public/img/european_sea.jpg
   caption: Lisboa, Portugal (Photo By &copy; starfishkenny)
 
-# Puglins
+# Plugins
 mathjax: true # whether support mathjax
 google_analytics_token: 'G-JXQFJMCXGS' # leave blank if you don't want google analytics
 disqus_short_name: 'starfishkenny' # leave blank if you don't want disqus
+plugins:
+  - jekyll-sitemap  
+  - jekyll-paginate
+  - jekyll-feed
