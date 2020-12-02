@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [빅데이터분석기사] NCS 기반 빅데이터 분석 절차 및 작업 계획 수립
+title: '[빅데이터분석기사] NCS 기반 빅데이터 분석 절차 및 작업 계획 수립'
 category: Data_Science
 tags: [빅데이터분석기사]
 comments: true
