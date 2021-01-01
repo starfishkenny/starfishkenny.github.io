@@ -154,5 +154,3 @@ last_page = last_page.split('&')[1]
 last_page = last_page.split('=')[1]
 last_page = int(last_page)
 ```
-
-#### 데이터 추출 기능의 함수화

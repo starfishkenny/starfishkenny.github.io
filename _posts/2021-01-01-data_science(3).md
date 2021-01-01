@@ -222,19 +222,11 @@ k10_historical_price = k10_historical_price.fillna(method='bfill')
 if k10_historical_price.isnull().values.any():
     k10_historical_price = k10_historical_price.fillna(method='ffill')
 k10_historical_price.head(3)
->> \begin{table}[]
-\begin{tabular}{lllllllllll}
-\hline
-\rowcolor[HTML]{373E4B} 
-\multicolumn{1}{r}{\cellcolor[HTML]{373E4B}{\color[HTML]{D4D8EC} \textbf{}}} & \multicolumn{1}{r}{\cellcolor[HTML]{373E4B}{\color[HTML]{D4D8EC} \textbf{000660}}} & \multicolumn{1}{r}{\cellcolor[HTML]{373E4B}{\color[HTML]{D4D8EC} \textbf{005380}}} & \multicolumn{1}{r}{\cellcolor[HTML]{373E4B}{\color[HTML]{D4D8EC} \textbf{005930}}} & \multicolumn{1}{r}{\cellcolor[HTML]{373E4B}{\color[HTML]{D4D8EC} \textbf{005935}}} & \multicolumn{1}{r}{\cellcolor[HTML]{373E4B}{\color[HTML]{D4D8EC} \textbf{006400}}} & \multicolumn{1}{r}{\cellcolor[HTML]{373E4B}{\color[HTML]{D4D8EC} \textbf{035420}}} & \multicolumn{1}{r}{\cellcolor[HTML]{373E4B}{\color[HTML]{D4D8EC} \textbf{035720}}} & \multicolumn{1}{r}{\cellcolor[HTML]{373E4B}{\color[HTML]{D4D8EC} \textbf{051910}}} & \multicolumn{1}{r}{\cellcolor[HTML]{373E4B}{\color[HTML]{D4D8EC} \textbf{068270}}} & \multicolumn{1}{r}{\cellcolor[HTML]{373E4B}{\color[HTML]{D4D8EC} \textbf{207940}}} \\ \hline
-\rowcolor[HTML]{414B5E} 
-{\color[HTML]{DBDFEF} \textbf{2020-12-28}}                                   & {\color[HTML]{DBDFEF} \textbf{115500.0}}                                           & {\color[HTML]{DBDFEF} 189500.0}                                                    & {\color[HTML]{DBDFEF} 78700.0}                                                     & {\color[HTML]{DBDFEF} 72900.0}                                                     & {\color[HTML]{DBDFEF} 559000.0}                                                    & {\color[HTML]{DBDFEF} 281000.0}                                                    & {\color[HTML]{DBDFEF} 373000.0}                                                    & {\color[HTML]{DBDFEF} 814000.0}                                                    & {\color[HTML]{DBDFEF} 333500.0}                                                    & {\color[HTML]{DBDFEF} 789000.0}                                                    \\
-\rowcolor[HTML]{3B4455} 
-{\color[HTML]{DBDFEF} \textbf{2020-12-24}}                                   & {\color[HTML]{DBDFEF} \textbf{118000.0}}                                           & {\color[HTML]{DBDFEF} 187000.0}                                                    & {\color[HTML]{DBDFEF} 77800.0}                                                     & {\color[HTML]{DBDFEF} 72800.0}                                                     & {\color[HTML]{DBDFEF} 563000.0}                                                    & {\color[HTML]{DBDFEF} 282000.0}                                                    & {\color[HTML]{DBDFEF} 374000.0}                                                    & {\color[HTML]{DBDFEF} 818000.0}                                                    & {\color[HTML]{DBDFEF} 347500.0}                                                    & {\color[HTML]{DBDFEF} 794000.0}                                                    \\
-\rowcolor[HTML]{414B5E} 
-{\color[HTML]{DBDFEF} \textbf{2020-12-23}}                                   & {\color[HTML]{DBDFEF} \textbf{116000.0}}                                           & {\color[HTML]{DBDFEF} 185000.0}                                                    & {\color[HTML]{DBDFEF} 73900.0}                                                     & {\color[HTML]{DBDFEF} 69900.0}                                                     & {\color[HTML]{DBDFEF} 554000.0}                                                    & {\color[HTML]{DBDFEF} 284000.0}                                                    & {\color[HTML]{DBDFEF} 377500.0}                                                    & {\color[HTML]{DBDFEF} 806000.0}                                                    & {\color[HTML]{DBDFEF} 355000.0}                                                    & {\color[HTML]{DBDFEF} 796000.0}                                                    \\ \hline
-\end{tabular}
-\end{table}
+>> 
+000660	005380	005930	005935	006400	035420	035720	051910	068270	207940
+2020-12-28	115500.0	189500.0	78700.0	72900.0	559000.0	281000.0	373000.0	814000.0	333500.0	789000.0
+2020-12-24	118000.0	187000.0	77800.0	72800.0	563000.0	282000.0	374000.0	818000.0	347500.0	794000.0
+2020-12-23	116000.0	185000.0	73900.0	69900.0	554000.0	284000.0	377500.0	806000.0	355000.0	796000.0
 ```
 
 ```python
@@ -242,52 +234,146 @@ k10_historical_price.head(3)
 k10_historical_mc = k10_historical_price * k10_info['Outstanding'] * k10_info['Floating'] * 0.01
 k10_historical_mc.tail(3)
 >> 
-```
-```python
-len(dates)
->> 6
-```
-
-```python
-len(prices) # 체결가, 등략률, 거래량, 거래대금 => 4X6 ==> 첫 번째 값만 필요 (0,4,8...추출)
->> 24
+000660	005380	005930	005935	006400	035420	035720	051910	068270	207940
+2020-01-06	5.072595e+13	1.598418e+13	2.472000e+14	2.150087e+14	1.179704e+13	2.318001e+13	9.787128e+12	1.393283e+13	1.768178e+13	6.746845e+12
+2020-01-03	5.083353e+13	1.598418e+13	2.472000e+14	2.147735e+14	1.174575e+13	2.330843e+13	9.660434e+12	1.411437e+13	1.814171e+13	6.910603e+12
+2020-01-02	5.094111e+13	1.625976e+13	2.458638e+14	2.145382e+14	1.189962e+13	2.343685e+13	9.660434e+12	1.425052e+13	1.839723e+13	7.017046e+12
 ```
 
 ```python
-for n in range(len(dates)):
-    this_date = dates[n].text
-    this_date = date_format(this_date)
+# 비중 계산을 위한 전체 종목의 시가총액 합 구하기
+k10 = pd.DataFrame()
+k10['Market Cap'] = k10_historical_mc.sum(axis=1)
+k10.head(3)
+>> 	Market Cap
+2020-12-28	9.540906e+14
+2020-12-24	9.527030e+14
+2020-12-23	9.206085e+14
+```
+
+```python
+# 기준 날짜 = 2020년 1월 2일 (목)
+base_date = dt.date(2020,1,2)
+```
+
+```python
+# 일자별 K10 인덱스 계산
+k10['Index'] = k10['Market Cap'] / k10['Market Cap'][base_date] * 100
+k10.tail(3)
+>> Market Cap	Index
+2020-01-06	6.120445e+14	99.964047
+2020-01-03	6.126725e+14	100.066617
+2020-01-02	6.122646e+14	100.000000
+```
+
+```python
+# 그래프로 나타내기
+# 사이즈, 그리드 설정
+plt.rcParams['figure.figsize'] = (10,5)
+plt.rcParams['grid.linestyle'] = '--'
+plt.rcParams['grid.alpha'] = 0.7
+plt.rcParams['lines.antialiased'] = True
+```
+
+```python
+plt.plot(k10['Index'], color='orange', label='K10')
+plt.legend(loc=0)
+plt.grid(True)
+```
+
+```python
+# KOSPI200과 비교
+def historical_index_naver(index_cd, start_date='', end_date='', page_n=1, last_page=0):
     
-    this_close = prices[n*4].text # 0,4,8...
-    this_close = this_close.replace(',','')
-    this_close = float(this_close)
-    this_close
+    if start_date:   
+        start_date = date_format(start_date)   
+    else:    
+        start_date = dt.date.today() 
+    if end_date:   
+        end_date = date_format(end_date)   
+    else:   
+        end_date = dt.date.today()  
+        
+        
+    naver_index = \
+    'http://finance.naver.com/sise/sise_index_day.nhn?code=' \
+    + index_cd + '&page=' + str(page_n)
     
-    print(this_date, this_close)
->> 2020-12-15 370.88
-2020-12-14 371.56
-2020-12-11 372.24
-2020-12-10 369.37
-2020-12-09 371.47
-2020-12-08 363.45
+    # 지정한 페이지에서 코드 읽기
+    source = urlopen(naver_index).read()
+    # 뷰티풀 스프로 태그별로 코드 분류
+    source = BeautifulSoup(source, 'lxml')   
+    
+    # <td class="date">태그에서 날짜 수집   
+    dates = source.find_all('td', class_='date')  
+    # <td class="number_1">태그에서 지수 수집
+    prices = source.find_all('td', class_='number_1')  
+    
+    for n in range(len(dates)):
+    
+        if dates[n].text.split('.')[0].isdigit():
+            
+            # 날짜 처리
+            this_date = dates[n].text
+            this_date= date_format(this_date)
+            
+            if this_date <= end_date and this_date >= start_date:   
+            # start_date와 end_date 사이에서 데이터 저장
+                # 종가 처리
+                this_close = prices[n*4].text   # 0,4,8...
+                this_close = this_close.replace(',', '')
+                this_close = float(this_close)
+
+                # 딕셔너리에 저장
+                historical_prices[this_date] = this_close
+                
+            elif this_date < start_date:   
+            # start_date 이전이면 함수 종료
+                return historical_prices              
+            
+    # 페이지 네비게이션
+    if last_page == 0:
+        last_page = source.find('td', class_='pgRR').find('a')['href']
+        # 마지막페이지 주소 추출
+        last_page = last_page.split('&')[1]
+        last_page = last_page.split('=')[1]
+        last_page = int(last_page) 
+        
+    # 다음 페이지 호출
+    if page_n < last_page:   
+        page_n = page_n + 1   
+        historical_index_naver(index_cd, start_date, end_date, page_n, last_page)   
+        
+    return historical_prices
 ```
 
 ```python
-# 페이지 내비게이션
-# '맨뒤' 검사
-paging = source.find('td', class_ = 'pgRR').find('a')['href']
-# 페이지 번호만 추출
-paging = paging.split('=')[1]
-paging
->> '617'
+index_cd = 'KPI200'
+historical_prices = dict()
+kospi200 = historical_index_naver(index_cd, '2020-1-1', '2020-12-28')
+k200 = pd.DataFrame({'Index': kospi200})
+k200.tail(3)
+>> 
+Index
+2020-12-23	371.32
+2020-12-24	379.18
+2020-12-28	379.93
 ```
 
 ```python
-# 페이지번호를 숫자 형식으로 변환
-last_page = source.find('td', class_='pgRR').find('a')["href"]
-last_page = last_page.split('&')[1]
-last_page = last_page.split('=')[1]
-last_page = int(last_page)
+# 수정 지수 칼럼 추가 (K10지수를 KOSPI200과 맞춤)
+k10['Adj Index'] = k10['Market Cap'] / k10['Market Cap'][base_date] * k200['Index'][base_date]
+k10.head(3)
+>> 
+Market Cap	Index	Adj Index
+2020-12-28	9.540906e+14	155.829777	452.451758
+2020-12-24	9.527030e+14	155.603148	451.793742
+2020-12-23	9.206085e+14	150.361217	436.573794
 ```
 
-#### 데이터 추출 기능의 함수화
+```python
+plt.plot(k10['Adj Index'], color='orange', label='K10')
+plt.plot(k200['Index'], color='magenta', label='KOSPI200')
+plt.legend(loc=0)
+plt.grid(True)
+```
