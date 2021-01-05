@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Python-Quant] 금융공학 모델링 (펀드)"
+title: "[Python-Financial Engineering] 금융공학 모델링 (펀드)"
 category: Data_Science
 tags: 
 comments: true
